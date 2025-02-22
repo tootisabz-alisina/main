@@ -21,9 +21,7 @@ struct ContentView: View {
                 isBlinking: $isBlinking,
                 isFaceVerified: $isFaceVerified,
                 isAccessoryDetected: $isAccessoryDetected,
-                currentStep: $currentStep,
-                capturedImage: $capturedImage,
-                showImagePreview: $showImagePreview
+                currentStep: $currentStep
             )
             .edgesIgnoringSafeArea(.all)
 
