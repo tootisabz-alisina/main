@@ -37,7 +37,7 @@ struct ContentView: View {
             // Circle Frame at the Center
             Ellipse()
                 .stroke(Color.white, lineWidth: 4) // White outline
-                .frame(width: 300, height: 350) // Size of the circle
+                .frame(width: 300, height: 350) // Size 
 
             // Overlay for Instructions
             VStack {
