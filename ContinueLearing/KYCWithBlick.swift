@@ -10,8 +10,6 @@ struct ContentView: View {
     @State private var isFaceVerified: Bool = false
     @State private var isAccessoryDetected: Bool = false
     @State private var currentStep: Int = 0 // Track the current step in the flow
-    @State private var capturedImage: UIImage? = nil // Store the captured image
-    @State private var showImagePreview: Bool = false // Control the image preview screen
 
     var body: some View {
         ZStack {
