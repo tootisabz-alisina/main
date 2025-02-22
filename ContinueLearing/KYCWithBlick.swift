@@ -77,12 +77,6 @@ struct ContentView: View {
                     if !isAccessoryDetected {
                         isFaceVerified = true
                         print("true") // Print true to the console
-
-                        // Capture the image after verification
-                        if let arView = ARSCNView().snapshot() as? UIImage {
-                            self.capturedImage = arView
-                            self.showImagePreview = true
-                        }
                     }
                 }
             }
@@ -90,28 +84,6 @@ struct ContentView: View {
         .onChange(of: isAccessoryDetected) { accessoryDetected in
             if accessoryDetected {
                 instruction = "Please remove any accessories (mask, glasses, hat)."
-            }
-        }
-        .sheet(isPresented: $showImagePreview) {
-            if let image = capturedImage {
-                ImagePreviewView(image: image)
-            }
-        }
-    }
-}
-
-struct ImagePreviewView: View {
-    let image: UIImage
-
-    var body: some View {
-        VStack {
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-                .padding()
-
-            Button("Close") {
-                // Dismiss the sheet
             }
             .padding()
         }
