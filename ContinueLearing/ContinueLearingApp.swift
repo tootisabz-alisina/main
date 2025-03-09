@@ -11,7 +11,7 @@ import SwiftUI
 struct ContinueLearingApp: App {
     var body: some Scene {
         WindowGroup {
-            FaceRecognitionView()
+            ContentView()
         }
     }
 }
